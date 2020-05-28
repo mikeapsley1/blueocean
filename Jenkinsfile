@@ -10,11 +10,7 @@ pipeline {
           }
         }
 
-        stage('Snyk') {
-          steps {
-            echo 'hello, world!'
-          }
-        }
+        
 
       }
     }
