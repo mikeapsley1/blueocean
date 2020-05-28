@@ -2,11 +2,12 @@ pipeline {
   agent any
   stages {
     
+   stage('Secrets Scan') {
     stage('Whipsers') {
       steps {
         echo 'hello, world!'
       }
- 
+    }
     }
 
     stage('Coverity') {
