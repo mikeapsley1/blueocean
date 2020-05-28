@@ -2,12 +2,30 @@ pipeline {
   agent any
   stages {
     
-   stage('Secrets Scan') {
+    stage('Secrets Scan') {
+      parallel {
+        stage('Trivy') {
+          steps {
+            echo 'hello, world!'
+          }
+        }
+
+        stage('Snyk') {
+          steps {
+            echo 'hello, world!'
+          }
+        }
+
+      }
+    }
+    
+    
+
     stage('Whipsers') {
       steps {
         echo 'hello, world!'
       }
-    }
+
     }
 
     stage('Coverity') {
