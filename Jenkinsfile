@@ -25,7 +25,7 @@ pipeline {
       parallel {
         stage('Trivy') {
           steps {
-            sh 'hello, world!'
+            echo 'hello, world!'
           }
         }
 
